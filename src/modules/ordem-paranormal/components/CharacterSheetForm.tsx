@@ -69,6 +69,9 @@ export function CharacterSheetForm({
   onResourceChange,
   onTextAreaChange,
 }: CharacterSheetFormProps) {
+
+  const periciaKeys = Object.keys(sheet.pericias) as Array<keyof CharacterSheet['pericias']>;
+
   return (
     <main className="min-h-screen bg-zinc-950 px-4 py-6 text-zinc-100 selection:bg-yellow-400/25 md:px-8">
       <div className="mx-auto max-w-7xl space-y-8">
@@ -222,7 +225,7 @@ export function CharacterSheetForm({
             </h2>
 
             <div className="custom-scrollbar grid max-h-[620px] grid-cols-1 gap-1 overflow-y-auto pr-2">
-              {(Object.keys(sheet.pericias) as Array<keyof CharacterSheet['pericias']>).map((pericia) => (
+              {periciaKeys.map((pericia) => (
                 <div key={pericia} className="group flex items-center justify-between rounded border-b border-zinc-900/70 p-2 transition-colors hover:bg-zinc-900">
                   <div className="flex items-center gap-3">
                     <Dice5 size={14} className="text-zinc-600 transition-colors group-hover:text-yellow-500" />
