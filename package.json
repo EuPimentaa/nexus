@@ -11,6 +11,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "typecheck": "tsc --noEmit"
+        "build": "tsc && vite build",
+        "preview": "vite preview"
     },
     "keywords": [],
     "author": "",
