@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Core rules engine for Ordem Paranormal RPG",
     "main": "src/index.ts",
+    "type": "module",
     "scripts": {
         "start": "ts-node src/index.ts",
         "test": "ts-node src/test_character.ts",
